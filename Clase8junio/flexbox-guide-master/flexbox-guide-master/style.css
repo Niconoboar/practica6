@@ -1,0 +1,152 @@
+body {
+  /* margin: 0; */
+  font-size: 4rem;
+  font-family: sans-serif;
+  background-color: #1d1818;
+}
+
+.flex-container {
+  background-color: #404040;
+  border-radius: 10px;
+  border: solid 2px yellow;
+}
+
+.flex-container > * {
+  padding: 10px;
+  margin: 10px;
+  border: solid 1px black;
+  border-radius: 10px;
+  background: #f18c55;
+}
+
+/* EMPIEZA AQUI*/
+
+/*FLEX CONTAINER: El elemento se convierte en un contenedor flexible, también conocido como "flex container". El flex container es el padre o contenedor principal que envuelve a uno o más elementos secundarios, también conocidos como "flex items".*/
+
+
+/* display:  permite controlar cómo se muestra un elemento en el navegador. Define el tipo de visualización del elemento.
+
+flex: El elemento se muestra como un contenedor flexible, permitiendo un diseño flexible de sus elementos secundarios (hijos) utilizando flexbox.
+
+inline-flex: Similar a flex, pero el contenedor se muestra en línea en lugar de bloque.*/
+
+.flex-container{
+  display: flex;
+}
+
+
+/* Flex-direction
+
+ determinan cómo se distribuyen y se alinean los elementos secundarios dentro del contenedor flexible. 
+
+ row (valor predeterminado): Los elementos secundarios se colocan en una sola línea horizontal, de izquierda a derecha. El primer elemento se posiciona a la izquierda y los siguientes se colocan uno después del otro en la misma línea.
+
+row-reverse: Los elementos secundarios se colocan en una línea horizontal, pero en orden inverso, de derecha a izquierda. El último elemento se posiciona a la izquierda y los demás elementos le siguen en orden inverso.
+
+column: Los elementos secundarios se colocan en una sola columna vertical, de arriba hacia abajo. El primer elemento se posiciona en la parte superior y los siguientes se colocan uno debajo del otro en la misma columna.
+
+column-reverse: Los elementos secundarios se colocan en una columna vertical, pero en orden inverso, de abajo hacia arriba. El último elemento se posiciona en la parte superior y los demás elementos le siguen en orden inverso.*/
+
+.flex-container{
+  flex-direction: row;
+}
+
+/*flex-wrap:  para controlar el ajuste de los elementos secundarios (hijos) cuando no hay suficiente espacio en el contenedor para mostrarlos en una sola línea.
+ 
+El valor predeterminado de flex-wrap es nowrap, lo que significa que los elementos secundarios intentarán ajustarse en una sola línea, incluso si se desborda el contenedor.
+
+Si estableces flex-wrap: wrap; en el contenedor, los elementos secundarios se ajustarán automáticamente a una nueva línea cuando no haya suficiente espacio horizontal en el contenedor.
+
+La propiedad flex-wrap también acepta el valor wrap-reverse, que funciona de manera similar a wrap, pero los elementos secundarios se ajustarán en líneas nuevas en orden inverso.*/
+
+.flex-container{
+  flex-wrap: wrap-reverse;
+}
+
+/* justify-content: para controlar la alineación horizontal de los elementos secundarios (hijos) dentro de él.
+
+justify-content acepta varios valores que determinan cómo se distribuyen los elementos secundarios a lo largo del eje principal (horizontal) del contenedor flexible.
+
+flex-start: Los elementos se alinean al principio del contenedor flexible.
+
+flex-end: Los elementos se alinean al final del contenedor flexible.
+
+center: Los elementos se alinean en el centro del contenedor flexible.
+
+space-between: Los elementos se distribuyen uniformemente a lo largo del contenedor flexible, con espacio adicional entre ellos.
+
+space-around: Los elementos se distribuyen uniformemente a lo largo del contenedor flexible, con espacio igual alrededor de ellos.
+
+space-evenly: Los elementos se distribuyen uniformemente a lo largo del contenedor flexible, con espacio igual entre ellos y en los extremos.*/
+
+.flex-container{
+  justify-content: space-around;
+}
+
+/* aling-items: para controlar la alineación vertical de los elementos secundarios (hijos) dentro de él.
+
+flex-start: Los elementos se alinean al principio del contenedor flexible en el eje transversal.
+
+flex-end: Los elementos se alinean al final del contenedor flexible en el eje transversal.
+
+center: Los elementos se alinean en el centro del contenedor flexible en el eje transversal.
+
+baseline: Los elementos se alinean en la línea de base del texto.
+stretch: Los elementos se estiran para ocupar todo el espacio disponible en el eje transversal.*/
+
+.flex-container{
+  align-items: center ;
+}
+
+/*align-content: se utiliza cuando existen múltiples líneas de elementos secundarios y se desea controlar cómo se distribuyen y se alinean esas líneas en el eje transversal (vertical) del contenedor.
+
+flex-start: Las líneas de elementos se alinean al principio del contenedor flexible en el eje transversal.
+
+flex-end: Las líneas de elementos se alinean al final del contenedor flexible en el eje transversal.
+
+center: Las líneas de elementos se alinean en el centro del contenedor flexible en el eje transversal.
+
+space-between: Las líneas de elementos se distribuyen uniformemente a lo largo del contenedor flexible, con espacio adicional entre ellas.
+
+space-around: Las líneas de elementos se distribuyen uniformemente a lo largo del contenedor flexible, con espacio igual alrededor de ellas.
+
+stretch: Las líneas de elementos se estiran para ocupar todo el espacio disponible en el eje transversal.*/
+
+ .flex-container{
+  align-content: space-around;
+ }
+
+ /*aling-self: se utiliza en un elemento secundario (hijo) dentro de un contenedor flexible (flex container) para controlar su alineación vertical en relación con los demás elementos secundarios.
+
+ auto: El elemento secundario utiliza la alineación establecida en align-items del contenedor.
+
+flex-start: El elemento secundario se alinea al principio del contenedor flexible en el eje transversal.
+
+flex-end: El elemento secundario se alinea al final del contenedor flexible en el eje transversal.
+
+center: El elemento secundario se alinea en el centro del contenedor flexible en el eje transversal.
+
+baseline: El elemento secundario se alinea en la línea de base del texto.
+stretch: El elemento secundario se estira para ocupar todo el espacio disponible en el eje transversal.*/
+
+.one{
+  align-self: center;
+}
+.two{
+  align-self: flex-end;
+}
+
+/*flex-basis: establece el tamaño base de un elemento secundario antes de que se apliquen las reglas de distribución flexibles.
+
+auto: El tamaño del elemento secundario se basa en su contenido o en su tamaño establecido por otras propiedades CSS.
+
+0: El elemento secundario tiene un tamaño inicial de cero y se distribuirá el espacio restante.
+
+100px: El elemento secundario tiene un tamaño inicial de 100 píxeles.*/
+
+.thre{
+  flex-basis: auto;
+}
+
+
+ 
